@@ -175,7 +175,7 @@ Refine sampling when changing size range, wavelength, angle range, or distributi
 
 For angle-dependent linear-polarization azimuth, angle refinement interpolates its unwrapped pi-periodic direction onto the refined grid. This is an explicit interpolation of the supplied direction samples, not a new optical model.
 
-An unexecuted GitHub Actions workflow is included using the official [MATLAB setup](https://github.com/matlab-actions/setup-matlab) and [run-command](https://github.com/matlab-actions/run-command) actions. It runs the same suite on Linux after publication; the local verification environment is Windows. Public-repository base-MATLAB workflows can use the action's licensing arrangement; private repositories may require a batch licensing token as described in its documentation.
+A GitHub Actions workflow is included using the official [MATLAB setup](https://github.com/matlab-actions/setup-matlab) and [run-command](https://github.com/matlab-actions/run-command) actions. It runs the same suite on Linux for pushes and pull requests; the local verification environment is Windows. Public-repository base-MATLAB workflows can use the action's licensing arrangement; private repositories may require a batch licensing token as described in its documentation.
 
 To regenerate the fixture, clone miepython to a separate external directory, check out the exact commit above, install `tools/requirements-reference.txt` in a Python environment, and run:
 
