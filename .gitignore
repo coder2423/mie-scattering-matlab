@@ -1,0 +1,15 @@
+# Generated simulation output
+/results/
+*.asv
+*.m~
+*.mat
+*.fig
+
+# Local environments, caches and operating-system files
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

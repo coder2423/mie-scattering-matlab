@@ -1,0 +1,13 @@
+function report=run_all_tests()
+%RUN_ALL_TESTS Run reference, physics, comparison, output and release checks.
+% From the repository root: addpath('tests'); report=run_all_tests();
+    root=fileparts(fileparts(mfilename('fullpath')));
+    originalPath=path; restorePath=onCleanup(@()path(originalPath));
+    addpath(root,fullfile(root,'programs'),fullfile(root,'tests'));
+    report=struct('reference',test_mie_scattering(), ...
+        'comparison',test_scattering_comparison(), ...
+        'output',test_scattering_output_controls(), ...
+        'release',test_release_readiness(), ...
+        'grid',test_grid_convergence());
+    fprintf('ALL_TESTS_PASSED\n');
+end
